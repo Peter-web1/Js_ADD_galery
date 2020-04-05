@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+		
+		center {
+			margin-top: 20px;
+		}
+		
+		hr {
+			width: 80%;			
+		}
+	
+		#flexplace {
+			display: flex;
+ 			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+
+		img {
+			width: 300px;
+			margin: 5px;
+			transition: 0.3s;
+		}
+	</style>
+	<script>
+	
+	</script>
+</head> 
+<body> 
+	<center>
+		<button class="btn btn-success btn-lg" onclick="add_click()">
+			<i class="fa fa-plus-square-o"   aria-hidden="true"></i> 
+			ADD
+		</button>
+	</center>
+	<hr>
+	<div id="flexplace">
+		
+	</div>
+	<script>
+		
+		var i=0;
+
+		function del(){
+			this.remove();
+		}
+
+		function add_click(){
+			i=i+1;
+
+			var new_element = document.createElement("img");
+
+			new_element.src ="https://source.images.unsplash.com/random/" +i;
+			new_element.ondblclick = del;
+			new_element.className = "img-thumbnail";
+
+			flexplace.appendChild(new_element);
+		}
+
+
+	</script>
+</body> 
+</html> 
